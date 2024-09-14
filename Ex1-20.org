@@ -1,0 +1,15 @@
+#+TITLE: Detab Program
+#+AUTHOR: Cristian Del Gobbo (pledged)
+#+SUBTITLE: Problem taken from the book "The C programming language" by Brian W.Kernighan and Dennis M.Ritchie
+#+STARTUP: overview hideblocks indent
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output
+
+** Problem Description
+   Write a program =detab= that relplaces tabs in the input with the proper number of blanks to space 
+   to the next tab stop. Assume a fixed set of tab stops, say every =n= columns. Should =n= be a variable 
+   or a symbolic parameter.
+
+** Code
+   #+begin_src C
+   
+   #+end_src
