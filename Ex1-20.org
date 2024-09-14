@@ -10,6 +10,42 @@
    or a symbolic parameter.
 
 ** Code
-   #+begin_src C
-   
+   #+begin_src C :tangle detab.c
+     #include <stdio.h>
+     #define TAB_SIZE 8 
+
+     int main(){
+       int c; 
+       int position = 0;
+
+       while((c = getchar()) != EOF){
+	 if(c =='\t'){
+	   int spaces = TAB_SIZE - (position % TAB_SIZE);
+	   for(int i = 0; i<spaces; i++){
+	     putchar(' ');
+	     position++;
+	   }
+
+	 }else if (c == '\n'){
+	   putchar(c);
+	   position = 0;
+	 }else{
+	   putchar(c);
+	   position++;
+	 }
+       }
+       return 0;
+     }
+
    #+end_src
+
+   #+RESULTS:
+
+   #+begin_src bash
+     gcc detab.c -o detab
+     echo -e "Hello\tWorld\n" | ./detab
+
+   #+end_src
+
+   #+RESULTS:
+   : Hello   World
