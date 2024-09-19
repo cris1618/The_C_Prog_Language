@@ -1,0 +1,35 @@
+#+TITLE: Test Program
+#+AUTHOR: Cristian Del Gobbo (pledged)
+#+SUBTITLE: Test of expressions and functions taken from the book "The C programming language" by Brian W.Kernighan and Dennis M.Ritchie
+#+STARTUP: overview hideblocks indent
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output
+
+** Test Code Blockes
+   #+begin_src C :results output
+     #include <string.h>
+
+
+     //Create the function strlen manually
+     int lenstr(char c[]){
+       int i;
+
+       i = 0;
+       while(c[i] != '\0'){
+	 i++;
+       }
+       return i;
+     }
+
+     int main(){
+       char s[]  = "I am a string";
+       printf("The length of the string is %d\n", strlen(s));
+
+       // Test it on the same program
+       printf("The length of the string is %d", lenstr(s));
+       return 0;
+     }
+   #+end_src
+
+   #+RESULTS:
+   : The length of the string is 13
+   : The length of the string is 13
